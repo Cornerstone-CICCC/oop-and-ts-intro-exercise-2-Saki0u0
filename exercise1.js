@@ -9,10 +9,33 @@
 
 class Vehicle {
   // YOUR CODE HERE
+  #make
+  #model
+  #year
+ 
+  constructor(make,model,year){
+    this.#make = make
+    this.#model = model
+    this.#year = year
+  }
+  getInfo(){
+    return `${this.#year} ${this.#make} ${this.#model}`
+  }
+  
 }
 
 class Car extends Vehicle {
   // YOUR CODE HERE
+  #door;
+
+  constructor(make,model,year,door){
+    super(make,model,year)
+    this.#door = door
+  }
+
+  getInfo(){
+    return `${super.getInfo()} with ${this.#door} doors"`
+  }
 }
 
 
